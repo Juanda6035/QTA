@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simuladores"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <!-- Subtítulo -->
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crédito Hipotecario en Colombia"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Campo Valor de la propiedad -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Valor de la propiedad"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/et_valor_propiedad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="100.000.000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="El valor de la propiedad no puede ser inferior a $70.000.000"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp"/>
+
+            <!-- Campo ¿Cuánto necesitas? -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* ¿Cuánto necesitas?"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/et_cuanto_necesitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="70.000.000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="El préstamo mínimo es de $50.000.000 y no puede exceder el 70% del valor de la propiedad."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp"/>
+
+            <!-- Campo Plazo del crédito -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* ¿A qué plazo necesitas el crédito (años)?"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/et_plazo_credito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Van desde los 5 hasta los 20 años. El plazo más común es de 20 años."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp"/>
+
+            <!-- Campo Tasa de interés -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* ¿A qué tasa de interés efectiva anual (TAE)?"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/et_tasa_interes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="14.03"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Esta tasa depende de tu historial crediticio y del banco en el que pidas el crédito."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp"/>
+
+            <!-- Botón de Simular -->
+            <Button
+                android:id="@+id/btn_simular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simular"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Resultado de la simulación -->
+            <TextView
+                android:id="@+id/tv_resultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
